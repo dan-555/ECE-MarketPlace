@@ -42,11 +42,9 @@
 					</ul>
 				</div>
 				<div class="copyright"><span class="titleStyle">Copyright&nbsp;<i class="far fa-copyright">&nbsp;2021 ECE MarketPlace&nbsp;<i class="far fa-registered"></i></i></span></div>
+			</div>
 		</div>
 	</div>
-	
-
-	</div>
-			<div class="space"></div>
-	<link href="css/footer.css" rel="stylesheet">
+	<div class="space"></div>
+	<link href="../css/footer.css" rel="stylesheet">
 </footer>

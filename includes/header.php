@@ -2,7 +2,7 @@
 	<div id="container">
 		<nav class="navbar navbar-expand-sm navbar-light">
 			<a class="navbar-brand" href="#">
-				<img src="img/logo3.JPG" alt="ECE MP"  height="50" class="d-inline-block align-top">
+				<img src="../img/logo3.JPG" alt="ECE MP"  height="50" class="d-inline-block align-top">
 				<span class="hidden"></span>
 			</a>
 			<button
@@ -23,7 +23,7 @@
 						<a class="nav-link" href="#">Accueil</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Tout Parcourir</a>
+						<a class="nav-link" href="pages/toutParcourir.php">Tout Parcourir</a>
 					</li>
 					<li class="nav-item active">
 						<a class="nav-link" href="#">Notifications</a>
@@ -37,6 +37,6 @@
 				</ul>
 				
 			</div>
-			<link href="css/header.css" rel="stylesheet">
+			<link href="../css/header.css" rel="stylesheet">
 		</nav>
 	</header>
