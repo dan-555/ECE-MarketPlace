@@ -1,0 +1,45 @@
+footer
+{
+	   clear: both;
+}
+.text-style
+{
+	color: white;
+	padding :  0;
+	margin :  0;
+	text-align: center;
+}
+
+#categories, #informations, #contacts
+{
+	text-align: center;
+	padding :  0;
+	margin :  0;
+	border: 1px solid white;
+}
+
+.titleStyle
+{
+	color: white;
+}
+.col
+{
+	margin: 0px;
+	padding: 0px;
+}
+.container
+{
+	border: 1px solid white;
+}
+
+.space
+{
+	height: 20px;
+}
+.copyright
+{
+	padding-top: 10px;
+	height: 50px;
+	border: 1px solid white;
+	text-align: center;
+}
