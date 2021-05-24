@@ -1,8 +1,7 @@
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-    </div>
-            <link href="css/selection.css" rel="stylesheet">
+<link href="css/selection.css" rel="stylesheet">
 <div class="container">
   <nav class="navbar navbar-default">
     <div class="navbar-header">
@@ -11,8 +10,17 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
+        <span>Pertinence</span>
+      <div class="row">
+    <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="deroulantb" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pertinence</button>
+          <div class="dropdown-menu" aria-labelledby="deroulantb">
+          <a class="dropdown-item" href="#">Meilleure Offre</a>
+          <button class="dropdown-item" type="button">Transaction Client-Vendeur</button>
+          <span class="dropdown-item-text">Achat immédiat</span>
+          </div>
       </button>
-      <a class="navbar-brand" href="#">MegaMenu</a>
+      <img src="img/logo3.JPG" alt="ECE MP"  height="40" class="d-inline-block align-top">
     </div>
 
 
@@ -38,16 +46,19 @@
                     </div>
                     <!-- End Item -->
                     <div class="item">
-                      <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRofwcCVaqKv7HIy-IxsuYhYrM8VuNi82vhfQ&usqp=CAU" class="img-responsive" alt="product 2"></a>
-                      <h4><small>Gold sandals with shiny touch</small></h4>
-                      <button class="btn btn-primary" type="button">7000€</button>
+                      <a href="#"><img src="https://www.joaillerie-royale.com/76586-home_default/bague-saphir.jpg" height="80" class="img-responsive" alt="product 2"></a>
+                      <h4><small>BAGUE SAPHIR
+                       BAGUE SAPHIR <br>
+                       Notre référence : OC29050 </small></h4>
+                      <button class="btn btn-primary" type="button">7105€</button>
                       <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
                     </div>
                     <!-- End Item -->
                     <div class="item">
                       <a href="#"><img src="https://pake-art.fr/images/eleves/dorure/dorure2/pake-art.fr_P6150389.JPG" class="img-responsive" alt="product 3"></a>
-                      <h4><small>Denin jacket stamped</small></h4>
-                      <button class="btn btn-primary" type="button">1000€</button>
+                      <h4><small>
+                      BEAU PETIT CADRE 19è ROMANTIQUE DORURE</small></h4>
+                      <button class="btn btn-primary" type="button">1250€</button>
                       <button href="#" class="btn btn-default" type="button"><span class="glyphicon glyphicon-shopping-cart"></span> Ajouter au panier</button>
                     </div>
                     <!-- End Item -->
@@ -63,12 +74,13 @@
               <ul>
                 <li class="dropdown-header">Meubles et Objets d'art</li>
                 <li><a href="#">Sculptures</a></li>
+                <li><a href="#">Livres</a></li>
                 <li><a href="#">Tableaux</a></li>
                 <li><a href="#">Armoires</a></li>
                 <li><a href="#">Fauteuils</a></li>
                 <li><a href="#">Chaises</a></li>
                 <li class="divider"></li>
-                <li class="dropdown-header">Acessoire VIP</li>
+                <li class="dropdown-header">Accessoires VIP</li>
                 <li><a href="#">Montres</a></li>
                 <li><a href="#">Bijoux</a></li>
                 <li><a href="#">Ceintures</a></li>
@@ -86,7 +98,7 @@
                 <li><a href="#">Calculatrice</a></li>
                 <li><a href="#">Stylos</a></li>
                 <li><a href="#">Pochettes</a></li>
-                <li><a href="#">Règle</a></li>
+                <li><a href="#">Règles</a></li>
                 <li class="divider"></li>
               </ul>
             </li>
@@ -112,5 +124,3 @@
     <!-- /.nav-collapse -->
   </nav>
 </div>
-
-<h1 class="c-text"> Menu </h1>
