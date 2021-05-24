@@ -56,12 +56,11 @@
 		</span>
 	</div>
 
-
+<?php require 'includes/selection.php'; ?>
 	<?php require 'includes/footer.php'; ?>
 
 
 	<link href="css/index.css" rel="stylesheet">
 	<script src="js/countDownToTime.js"></script>
-
 </body>
 </html>
