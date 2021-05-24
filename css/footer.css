@@ -22,12 +22,12 @@ footer
 {
 	color: white;
 }
-.col
+.colStyle
 {
 	margin: 0px;
 	padding: 0px;
 }
-.container
+.containerBorder
 {
 	border: 1px solid white;
 }

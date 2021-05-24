@@ -2,7 +2,7 @@
 	<div id="container">
 		<nav class="navbar navbar-expand-sm navbar-light">
 			<a class="navbar-brand" href="#">
-				<img src="../img/logo3.JPG" alt="ECE MP"  height="50" class="d-inline-block align-top">
+				<img src="//localhost//ECE-MarketPlace/img/logo3.JPG" alt="ECE MP"  height="50" class="d-inline-block align-top">
 				<span class="hidden"></span>
 			</a>
 			<button
@@ -20,23 +20,23 @@
 				
 				<ul class="navbar-nav ms-auto text-center">
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Accueil</a>
+						<a class="nav-link" href="//localhost//ECE-MarketPlace"><i class="fas fa-home"></i>&nbsp;Accueil</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="pages/toutParcourir.php">Tout Parcourir</a>
+						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/toutParcourir.php"><i class="fas fa-folder"></i>&nbsp;Tout Parcourir</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Notifications</a>
+						<a class="nav-link" href="#"><i class="fas fa-bell"></i>&nbsp;Notifications</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Panier</a>
+						<a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Votre Compte</a>
+						<a class="nav-link" href="#"><i class="fas fa-user-circle"></i>&nbsp;Mon Compte</a>
 					</li>
 				</ul>
 				
 			</div>
-			<link href="../css/header.css" rel="stylesheet">
+			<link href="//localhost//ECE-MarketPlace/css/header.css" rel="stylesheet">
 		</nav>
 	</header>

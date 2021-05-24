@@ -1,5 +1,5 @@
 <footer>
-	<div class="container">
+	<div class="container containerBorder">
 		<p class="text-style" >Restez connectés !</p>
 		<nav class="navbar navbar-expand-sm justify-content-center">
 			<!-- Links -->
@@ -15,9 +15,9 @@
 				</li>
 			</ul>
 		</nav>
-		<div classe="footer-content container">
+		<div classe="footer-content container containerBorder">
 			<div class="row">
-				<div class="col">
+				<div class="col colStyle">
 					<div id="categories"><span class="titleStyle"><i class="fas fa-list-alt"></i>&nbsp;Catégories</span></div>
 					<ul class="list-group list-group-flush">
 						<a href="#" style="text-decoration:none"><li class="list-group-item">Meubles et objets d'arts</li></a>
@@ -25,7 +25,7 @@
 						<a href="#" style="text-decoration:none"><li class="list-group-item" >Matériels scolaires</li></a>
 					</ul>
 				</div>
-				<div class="col">
+				<div class="col colStyle">
 					<div id="informations"><span class="titleStyle"><i class="fas fa-info-circle"></i>&nbsp;Besoin d'information ?</span></div>
 					<ul class="list-group list-group-flush">
 						<a href="#" style="text-decoration:none"><li class="list-group-item">Moyens de paiement</li></a>
@@ -33,7 +33,7 @@
 						<a href="#" style="text-decoration:none"><li class="list-group-item" >Conditions de ventes</li></a>
 					</ul>
 				</div>
-				<div class="col">
+				<div class="col colStyle">
 					<div id="contacts"><span class="titleStyle"><i class="fas fa-id-card-alt"></i>&nbsp;Contact</span></div>
 					<ul class="list-group list-group-flush">
 						<a target="_blank" href="https://www.google.fr/maps/place/ECE+Paris+Lyon/@48.8518829,2.2848093,17z/data=!3m1!4b1!4m5!3m4!1s0x47e6701b4f58251b:0x167f5a60fb94aa76!8m2!3d48.8518829!4d2.286998" style="text-decoration:none"><li class="list-group-item"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;37 Quai de Grenelle, 75015 Paris</li></a>
@@ -46,5 +46,5 @@
 		</div>
 	</div>
 	<div class="space"></div>
-	<link href="../css/footer.css" rel="stylesheet">
+	<link href="//localhost//ECE-MarketPlace/css/footer.css" rel="stylesheet">
 </footer>
