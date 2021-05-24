@@ -1,0 +1,76 @@
+h2 {
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+color: white;
+padding-top: 30px;
+padding-bottom: 40px;
+}
+h2:after {
+display: inline-block;
+margin: 0 0 8px 20px;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+h2:before {
+display: inline-block;
+margin: 0 20px 8px 0;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+body
+{
+background-color: #007179;
+}
+.carousel-item{
+height: 400px;
+}
+.carousel-item img{
+height: 400px;
+}
+h3
+{
+color: white;
+padding-top: 30px;
+padding-bottom: 40px;
+padding-left: 20px;
+}
+#venteFlash
+{
+padding-top: 40px;
+float :  left;
+}
+
+.countdown
+{
+	    margin-top: 44px;
+	    margin-left: 250px;
+}
+.border
+{
+	padding: 3px;
+	border: 1rem solid;
+}
+.timeel
+{
+width:30px;
+height:24px;
+text-align:center;
+color:#FFF;
+font-size:18px;
+border-radius:3px
+}
+
+.timeColor{
+font-size:18px;
+color:#FFF;
+
+
+}
