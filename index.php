@@ -11,6 +11,7 @@
 <body style="background-color: #007179;">
 <div class="container-fluid">
 <?php require 'includes/header.php'; ?>
+<?php require 'includes/selection.php'; ?>
 </div>
 </body>
 </html>
