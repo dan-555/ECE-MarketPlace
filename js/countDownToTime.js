@@ -29,4 +29,4 @@ function countDownToTime(countTo, id) {
 
   clearTimeout(countDownToTime.interval);
   countDownToTime.interval = setTimeout(function(){ countDownToTime(countTo, id); },1000);
-}s
+}

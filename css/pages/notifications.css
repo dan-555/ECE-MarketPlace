@@ -1,0 +1,209 @@
+body
+{
+background-color: #007179;
+}
+h2 {
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+color: white;
+padding-top: 30px;
+padding-bottom: 40px;
+}
+h2:after {
+display: inline-block;
+margin: 0 0 8px 20px;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+h2:before {
+display: inline-block;
+margin: 0 20px 8px 0;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+
+.container
+{
+
+}
+@media (min-width: 1400px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1700px !important;
+}
+}
+
+.space
+{
+	height: 20px;
+}
+
+
+
+/*
+   NAV SideBar
+*/
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    width: 100%;
+    align-items: stretch;
+}
+
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    background: #7386D5;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #6d7fcc;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    border-bottom: 1px solid #47748b;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: #7386D5;
+    background: #fff;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #6d7fcc;
+}
+
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #6d7fcc;
+}
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+.navcolor {
+    background-color: green;
+}
+
+/* ---------------------------------------------------
+    MEDIAQUERIES
+----------------------------------------------------- */
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #sidebarCollapse span {
+        display: none;
+    }
+}
+
+/* Sidebar model : 	<https://codepen.io/truongtx-ccvn/pen/qLXGKV */
+
+.typeAchat, .marque, .prixcontainer,.tri
+{
+	margin-left: 4%;
+	margin-right: 10%;
+	border:2px solid #ccc;
+	padding-left: 5%;
+	height: 120px;
+}
+
+.titreDesCriteres
+{
+	margin-bottom: 10px;
+	margin-top: 3px;
+}
+.marque
+{
+overflow-y: scroll;
+height: 120px;
+}
+
+.input-group
+{
+	padding-right: 40%;
+}
+.btn-submit
+{
+	background-color: white;
+	color: #6d7fcc;
+
+}
+
+/*Items*/
+.spaceMasonry
+{
+	margin-bottom: -20px;
+}
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+.card-img-top {
+    width: 100%;
+    height: 12vw;
+    object-fit: cover;
+}
+.btn-card
+{
+	background-color: #007179 !important;
+	color: white !important;
+}
+
+.btn-more
+{
+	background-color: white !important;
+	color: #007179 !important;
+	float: right;
+
+}

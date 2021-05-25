@@ -1,7 +1,7 @@
 <header>
 	<div id="container">
 		<nav class="navbar navbar-expand-sm navbar-light">
-			<a class="navbar-brand" href="#">
+			<a class="navbar-brand" href="//localhost//ECE-MarketPlace">
 				<img src="//localhost//ECE-MarketPlace/img/logo3.JPG" alt="ECE MP"  height="50" class="d-inline-block align-top">
 				<span class="hidden"></span>
 			</a>
@@ -26,7 +26,7 @@
 						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/toutParcourir.php"><i class="fas fa-folder"></i>&nbsp;Tout Parcourir</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#"><i class="fas fa-bell"></i>&nbsp;Notifications</a>
+						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/notifications.php"><i class="fas fa-bell"></i>&nbsp;Notifications</a>
 					</li>
 					<li class="nav-item active">
 						<a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
