@@ -34,7 +34,6 @@
 						<li><a class="dropdown-item" href="#">Meubles et objets d'arts</a></li>
 						<li><a class="dropdown-item" href="#">Accessoire VIP</a></li>
 						<li><a class="dropdown-item" href="#">Materiels scolaire</a></li>
-						<li><hr class="dropdown-divider"></li>
 					</ul>
    					 <button class="btn btn-primary" type="button" id="button-addon2"><i style="color:white" class="fas fa-search"></i></button>
 
