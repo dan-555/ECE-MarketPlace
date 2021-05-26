@@ -32,7 +32,7 @@
 						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/panier.php"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#"><i class="fas fa-user-circle"></i>&nbsp;Mon Compte</a>
+						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/login.php"><i class="fas fa-user-circle"></i>&nbsp;Mon Compte</a>
 					</li>
 				</ul>
 				
