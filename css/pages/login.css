@@ -1,0 +1,40 @@
+body
+{
+background-color: #007179;
+}
+h2 {
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+color: white;
+padding-top: 30px;
+padding-bottom: 40px;
+}
+h2:after {
+display: inline-block;
+margin: 0 0 8px 20px;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+h2:before {
+display: inline-block;
+margin: 0 20px 8px 0;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+.section 
+{
+	padding-left: 25%;
+    padding-right: 25%;
+}
+.centrerbouton
+{
+   margin-top: 35px;
+}

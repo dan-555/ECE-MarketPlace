@@ -202,11 +202,14 @@
 						<div class="space"> </div>
 					</div>
 				</div>
-				<div class="container" style="margin-top: 50px;">
-					<?php require '../includes/footer.php'; ?>
-				</div>
+
 			</div>
 		</div>
+				<div class="container" style="margin-top: 50px;">
+					<?php require '../includes/footer.php'; ?>
+				</div>	
+
+
 	</div>
 </body>
 </html>

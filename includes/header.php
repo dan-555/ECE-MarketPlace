@@ -29,7 +29,7 @@
 						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/notifications.php"><i class="fas fa-bell"></i>&nbsp;Notifications</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
+						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/panier.php"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
 					</li>
 					<li class="nav-item active">
 						<a class="nav-link" href="#"><i class="fas fa-user-circle"></i>&nbsp;Mon Compte</a>
