@@ -7,6 +7,9 @@
 	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/aa064fe470.js" crossorigin="anonymous"></script>
+	<link href="css/index.css" rel="stylesheet">
+	<script src="js/countDownToTime.js"></script>
+	<script src="js/masonry.pkgd.min.js"></script>
 </head>
 <body>
 	<div class="container-fluid">
@@ -31,14 +34,13 @@
 					</div>
 				</div>
 				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></sspan>
+				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Previous</span>
 					</button>
 					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
 					<span class="carousel-control-next-icon" aria-hidden="true"></span>
 					<span class="visually-hidden">Next</span>
 					</button>
-				</div>
 			</div>
 		</div>
 		<div class="container">
@@ -76,14 +78,14 @@
 					</div>
 					
 					<div class="col-sm-6 col-lg-4 mb-4">
-						<div class="card p-3">
+						<div class="card p-3" style="background-color: red" >
 							<figure class="p-3 mb-0">
 								<blockquote class="blockquote">
-									<p>A well-known quote, contained in a blockquote element.</p>
+									<p style="color:white;">Profitez des offres allant jusqu'a -50%</p>
 								</blockquote>
-								<figcaption class="blockquote-footer mb-0 text-muted">
+								<!--<figcaption class="blockquote-footer mb-0 text-muted">
 								Someone famous in <cite title="Source Title">Source Title</cite>
-								</figcaption>
+								</figcaption> -->
 							</figure>
 						</div>
 					</div>
@@ -126,7 +128,7 @@
 						</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="card p-3 text-end">
+					<div class="card text-end">
 							<img src="..." class="card-img-top" alt="...">
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
@@ -138,23 +140,24 @@
 					</div>
 				</div>
 				<div class="col-sm-6 col-lg-4 mb-4">
-					<div class="card">
-						<div class="card-body">
-							<h5 class="card-title">Card title</h5>
-							<p class="card-text">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
-							<p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+						<div class="card p-3" style="background-color: red" >
+							<figure class="p-3 mb-0">
+								<blockquote class="blockquote">
+									<p style="color:white;">Rejoignez la plus grande plateforme de e-commerce en ligne.<br>Decouvrez des centaines d'objets mis en ligne par notre grande communotée </p>
+								</blockquote>
+								<!--<figcaption class="blockquote-footer mb-0 text-muted">
+								Someone famous in <cite title="Source Title">Source Title</cite>
+								</figcaption> -->
+							</figure>
 						</div>
-					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<?php require 'includes/footer.php'; ?>
-<link href="css/index.css" rel="stylesheet">
-<script src="js/countDownToTime.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha384-GNFwBvfVxBkLMJpYMOABq3c+d3KnQxudP/mGPkzpZSTYykLBNsZEnG2D9G/X/+7D" crossorigin="anonymous" async></script>
-<script src="js/countDownToTime.js"></script>
 
+		<div class="container" style="margin-top: 50px;">
+			<?php require 'includes/footer.php'; ?>
+		</div>
+</div>
 </body>
 </html>

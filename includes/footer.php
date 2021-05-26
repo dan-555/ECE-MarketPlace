@@ -20,9 +20,10 @@
 				<div class="col colStyle">
 					<div id="categories"><span class="titleStyle"><i class="fas fa-list-alt"></i>&nbsp;Catégories</span></div>
 					<ul class="list-group list-group-flush">
-						<a href="#" style="text-decoration:none"><li class="list-group-item">Meubles et objets d'arts</li></a>
-						<a href="#" style="text-decoration:none"><li class="list-group-item">Accessoire VIP</li></a>
-						<a href="#" style="text-decoration:none"><li class="list-group-item" >Matériels scolaires</li></a>
+						<a href="//localhost//ECE-MarketPlace/pages/category/meublesObjetsArts.php" style="text-decoration:none"><li class="list-group-item">Meubles et objets d'arts</li></a>
+						<a href="//localhost/ECE-MarketPlace/pages/category/accessoireVIP.php" style="text-decoration:none"><li class="list-group-item">Accessoire VIP</li></a>
+						
+						<a href="//localhost/ECE-MarketPlace/pages/category/materielsScolaires.php" style="text-decoration:none"><li class="list-group-item">Matériels scolaires</li></a>
 					</ul>
 				</div>
 				<div class="col colStyle">
