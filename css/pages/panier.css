@@ -1,0 +1,96 @@
+body
+{
+background-color: #007179;
+}
+h2 {
+width: 100%;
+margin: 0;
+padding: 0;
+text-align: center;
+color: white;
+padding-top: 30px;
+padding-bottom: 40px;
+}
+h2:after {
+display: inline-block;
+margin: 0 0 8px 20px;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+h2:before {
+display: inline-block;
+margin: 0 20px 8px 0;
+height: 3px;
+content: " ";
+text-shadow: none;
+background-color: white;
+width: 140px;
+}
+
+.container
+{
+
+}
+
+@media (min-width: 1400px) {
+.container, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
+    max-width: 1700px !important;
+}
+}
+
+.space
+{
+	height: 20px;
+}
+
+.content
+{
+ 
+
+}
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+        border: solid 5px yellow;
+
+}
+.card .h-100
+{
+
+	margin-left: 25%;
+	margin-right: 25%
+}
+.card-img-top {
+    width: 100%;
+    height: 25vw;
+    object-fit: cover;
+}
+.btn-card
+{
+	background-color: #007179 !important;
+	color: white !important;
+}
+
+.btn-more
+{
+	background-color: white !important;
+	color: #007179 !important;
+	float: right;
+
+}
+
+/* table src: https://mdbootstrap.com/docs/b4/jquery/tables/scroll/*/
+
+.my-custom-scrollbar {
+position: relative;
+height: 300px;
+overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+.

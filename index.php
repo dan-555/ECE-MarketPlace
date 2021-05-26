@@ -1,3 +1,6 @@
+
+<?php require_once('includes/connexion.php'); ?>
+
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -158,6 +161,28 @@
 		<div class="container" style="margin-top: 50px;">
 			<?php require 'includes/footer.php'; ?>
 		</div>
+
+<?php 
+/*Ventes flash items */
+
+
+
+$query="SELECT "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+?>
 </div>
 </body>
 </html>
