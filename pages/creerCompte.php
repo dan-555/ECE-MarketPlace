@@ -16,13 +16,13 @@
 		
 		<h2>Creer un Compte &nbsp;<i class="fas fa-sign-in-alt"></i></h2>
 		
-		<div class="container section">
+		<div class="container">
 			
-			<form action="">
+			<form method="POST" action="creerCompteform.php">
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">Nom: </span>
-					<input type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
 				</div>
 				
 				<div class="input-group mb-3">

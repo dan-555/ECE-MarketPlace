@@ -1,16 +1,18 @@
 <?php
+       /*
+    * Change the value of $password if you have set a password on the root userid
+    * Change NULL to port number to use DBMS other than the default using port 3306
+    *
+    */
+    $user = 'root';
+    $password = ''; //To be completed if you have set a password to root
+    $database = 'ecemarketplace'; //To be completed to connect to a database. The database must exist.
+    $port = 3306; //Default must be NULL to use default port
+    $mysqli = new mysqli('127.0.0.1', $user, $password, $database, $port);
 
+    if ($mysqli->connect_error) {
+        die('Connect Error(' . $mysqli->connect_errno . ') '
+                . $mysqli->connect_error);
+    }
 
-
-// Defined as constants so that they can't be changed
-DEFINE ('DB_USER', 'root');
-DEFINE ('DB_PASSWORD', '');
-DEFINE ('DB_HOST', 'localhost');
-DEFINE ('DB_NAME', 'ecemarketplace');
-
-// $dbc will contain a resource link to the database
-// @ keeps the error from showing in the browser
-
-$dbc = @mysqli_connect(DB_HOST, DB_USER, DB_PASSWORD, DB_NAME)
-OR die('Could not connect to MySQL: ' . mysqli_connect_error());
 ?>
