@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
 	<title>ECE MarketPlace !</title>
@@ -65,6 +64,7 @@
 
 					<div class="row" data-masonry='{"percentPosition": true }'>
 					<div class="col-sm-6 col-lg-4 mb-4">
+						
 						<div class="card h-100">
 							<img src="..." class="card-img-top" alt="...">
 							<div  class="card-body d-flex flex-column">
@@ -75,6 +75,7 @@
 								
 							</div>
 						</div>
+
 					</div>
 					
 					<div class="col-sm-6 col-lg-4 mb-4">
@@ -159,27 +160,7 @@
 			<?php require 'includes/footer.php'; ?>
 		</div>
 
-<?php 
-/*Ventes flash items */
 
-
-
-$query="SELECT "
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-?>
 </div>
 </body>
 </html>
