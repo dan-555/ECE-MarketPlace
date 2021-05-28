@@ -1,3 +1,4 @@
+<?php require '../pages/creerCompteForm.php'; ?>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -18,38 +19,39 @@
 		
 		<div class="container">
 			
-			<form method="POST" action="creerCompteform.php">
+			<form method="POST">
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">Nom: </span>
-					<input required type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Nom" aria-label="Nom" aria-describedby="basic-addon1" name="nom">
 				</div>
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1">Prenom:</span>
-					<input type="text" class="form-control" placeholder="Prenom" aria-label="Prenom" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Prenom" aria-label="Prenom" aria-describedby="basic-addon1" name="prenom">
 				</div>
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-house-user"></i></span>
-					<input type="text" class="form-control" placeholder="Adresse" aria-label="Adresse" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Adresse" aria-label="Adresse" aria-describedby="basic-addon1" name="adresse">
 				</div>
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-phone-alt"></i></span>
-					<input type="text" class="form-control" placeholder="Tel" aria-label="Tel" aria-describedby="basic-addon1">
+					<input required type="number" class="form-control" placeholder="Tel" aria-label="Tel" aria-describedby="basic-addon1" name="tel">
 				</div>
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
-					<input type="text" class="form-control" placeholder="Mail" aria-label="Mail" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Mail" aria-label="Mail" aria-describedby="basic-addon1" name="mail">
 				</div>
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
-					<input type="password" class="form-control" placeholder="Mot de passe" aria-label="mdp" aria-describedby="basic-addon1">
+					<input required type="password" class="form-control" placeholder="Mot de passe" aria-label="mdp" aria-describedby="basic-addon1" name="mdp">
 				</div>
 				
 				<div class="centrerbouton text-center">
-					<a role="button" class="btn btn-warning" href="">Creer un compte</a>
+
+					<button class="btn btn-warning" name="bouton">Creer un compte</button>
 				</div>
 			</form>
 		</div>
