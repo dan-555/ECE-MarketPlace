@@ -18,79 +18,100 @@ session_start();
 		<?php require '../includes/header.php'; ?>
 		
 		<h2>Mon Panier &nbsp;<i class="fas fa-shopping-bag"></i></h2>
-		
-		
-		<div class="container content">
+		<?php 
+				
+
+				// Si connecté
+	         	if(isset($_SESSION['idLogin']))
+					{
+
+						if($_SESSION['compte']=="admin")
+						{
+
+						    	echo' <h1 style="text-align:center; color:white">Compte Admin pas de panier</h1>';
+
+						}
+
+						else {
+
+
+							echo" 		<div class='container content'>
 			
-			<div class="table-wrapper-scroll-y my-custom-scrollbar  ">
-				<table style="background-color: white" class="table table-bordered table-hover table-striped">
+			<div class='table-wrapper-scroll-y my-custom-scrollbar  '>
+				<table style='background-color: white' class='table table-bordered table-hover table-striped'>
 					<thead>
 						<tr>
-							<th scope="col">#Objet</th>
-							<th scope="col">Photo</th>
-							<th scope="col">Nom</th>
-							<th scope="col">Type d'achat</th>
-							<th scope="col">Prix</th>
-							<th scope="col " style="width: 1%;">Retirer</th>
+							<th scope='col'>#Objet</th>
+							<th scope='col'>Photo</th>
+							<th scope='col'>Nom</th>
+							<th scope='col'>Type d'achat</th>
+							<th scope='col'>Prix</th>
+							<th scope='col ' style='width: 1%;''>Retirer</th>
 						</tr>
 					</thead>
-					<tbody>
-						<tr>
-							<th scope="row">1</th>
+					
+					<tbody>";
+
+				
+			$sql = "SELECT item_idItem from panieritem WHERE compteacheteur_idCompteAcheteur='$_SESSION['idCompte']'";
+			$result = $mysqli->query($sql);
+
+		if ($result->num_rows > 0) { //Si ya des articles
+
+			while($row = $result->fetch_assoc()) {	//Pour chaque article
+
+			}
+
+
+
+				/*	<tr>
+							<th scope='row'>1</th>
 							<td>Mark</td>
 							<td>Otto</td>
 							<td>@mdo</td>
 							<td>@mdo</td>
-							<td><a role="button" class="btn btn-danger" href="">Supprimer</a></td>
+							<td><a role='button' class='btn btn-danger' href=''>Supprimer</a></td>
 						</tr>
-						<tr>
-							<th scope="row">2</th>
-							<td>Jacob</td>
-							<td>Thornton</td>
-							<td>@mdo</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">3</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-							<td>@mdo</td>
-							
-						</tr>
-						<tr>
-							<th scope="row">4</th>
-							<td>Mark</td>
-							<td>Otto</td>
-							<td>@mdo</td>
-							<td>@mdo</td>
-						</tr>
-						<tr>
-							<th scope="row">5</th>
-							<td>Jacob</td>
-							<td>@mdo</td>
-							
-							<td>Thornton</td>
-							<td>@fat</td>
-						</tr>
-						<tr>
-							<th scope="row">6</th>
-							<td>Larry</td>
-							<td>the Bird</td>
-							<td>@twitter</td>
-							<td>@mdo</td>
-						</tr>
-					</tbody>
+
+*/
+
+				echo"	</tbody>
 				</table>
 			</div>
-			<div class="space"></div>
-			<div class="checkout" style="float: right;">
-				<span style="color:white;font-size:18px;margin-right: 240px;">Total :</span>  
-				<span id="Total"></span>
-				<a role="button" class="btn" style="background-color:white;color: #007179" href="">Passer commande</a>
+			<div class='space'></div>
+			<div class='checkout' style='float: right;''>
+				<span style='color:white;font-size:18px;margin-right: 240px;''>Total :</span>  
+				<span id='Total'></span>
+				<a role='button' class='btn' style='background-color:white;color: #007179' href=''>Passer commande</a>
 			</div>
 		</div>
+			
+</div>";
+
+
+
+
+
+			}
+
+	}
+
+				else {
+
+				echo' <h1 style="text-align:center; color:white">Veuillez vous connecter</h1>';
+
+				}
+
+
+
+
+		 ?>
 		
+
+
+
+
+
 		<div class="space"> </div>
 		<div class="container" style="margin-top: 50px;">
 			<?php require '../includes/footer.php'; ?>

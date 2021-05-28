@@ -43,7 +43,7 @@
  					
  					else {
 
-						echo '<a class="nav-link" href="pages/login.php"><i class="fas fa-user-circle"></i>&nbsp;Se connecter</a>';
+						echo '<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/login.php"><i class="fas fa-user-circle"></i>&nbsp;Se connecter</a>';
  					}
 
 					?>

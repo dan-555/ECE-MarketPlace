@@ -48,7 +48,6 @@ session_start();
 										
 						
 						<a href='../item.php?id=" .$id ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>
-						<a href='#' class='p-2 bg-info btn btn-card mt-auto'><i class='fas fa-shopping-cart'></i>&nbsp;Ajouter au Panier</a>
 																			
 																						
 																	</div>

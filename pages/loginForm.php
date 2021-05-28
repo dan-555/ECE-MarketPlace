@@ -7,9 +7,11 @@ require_once('../includes/connexion.php');
 @$mdp = isset($_POST["mdp"])? $_POST["mdp"] : "";
 
 session_start();
+
 $_SESSION['mail']="";
-$_SESSION['mail']="";
+$_SESSION['mdp']="";
 $_SESSION['compte']="";
+$_SESSION['idCompte']="";
 
 if (isset($_POST["bouton"])) {
 
@@ -22,6 +24,7 @@ if ($result->num_rows > 0) {
 		 
 		$row = $result->fetch_assoc();
 		$idLogin=$row["idLogin"];
+		$idCompte=$row["CompteAdministrateur_idCompteAdministrateur"];
 
 					echo $idLogin;
 		
@@ -32,7 +35,9 @@ if ($result->num_rows > 0) {
 					$_SESSION['idLogin']=$idLogin;								
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
-					$_SESSION['compte']="admin";		
+					$_SESSION['compte']="admin";	
+					$_SESSION['idCompte']=$idCompte;
+
 					header("Location: profil.php?id=".$_SESSION['idLogin']);		
 }
 
@@ -46,6 +51,7 @@ else
 	 {
 	     $row = $result2->fetch_assoc();
 	 	$idLogin=$row["idLogin"];
+		$idCompte=$row["CompteVendeur_idCompteVendeur"];
 
 		//c est un compte vendeur
 					echo '<script language="javascript">';
@@ -55,7 +61,9 @@ else
 					$_SESSION['idLogin']=$idLogin;			
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
-					$_SESSION['compte']="vendeur";				
+					$_SESSION['compte']="vendeur";
+					$_SESSION['idCompte']=$idCompte;
+
 		 			header("Location: profil.php?id=".$_SESSION['idLogin']);		
 
 	}
@@ -71,7 +79,9 @@ else
 
 		//c est un compte acheteur
 		$row = $result3->fetch_assoc();
-	 		$idLogin=$row["idLogin"];
+	 	
+	 	$idLogin=$row["idLogin"];
+		$idCompte=$row["CompteAcheteur_idCompteAcheteur"];
 
 					echo '<script language="javascript">';
 					echo 'alert("acheteur")';
@@ -80,7 +90,9 @@ else
 					$_SESSION['idLogin']=$idLogin;							
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
-					$_SESSION['compte']="acheteur";			
+					$_SESSION['compte']="acheteur";	
+					$_SESSION['idCompte']=$idCompte;
+
 					header("Location: profil.php?id=".$_SESSION['idLogin']);		
 					
 		}
