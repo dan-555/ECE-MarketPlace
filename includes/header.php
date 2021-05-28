@@ -32,7 +32,21 @@
 						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/panier.php"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
 					</li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#"><i class="fas fa-user-circle"></i>&nbsp;Mon Compte</a>
+						
+					<?php
+					if(isset($_SESSION['idLogin']))
+					{
+						$idLogin=$_SESSION['idLogin'];
+
+						echo "<a class='nav-link' href='//localhost//ECE-MarketPlace/pages/profil.php?id=".$idLogin."'><i class='fas fa-user-circle'></i>&nbsp;Mon Compte</a>";
+					}
+ 					
+ 					else {
+
+						echo '<a class="nav-link" href="pages/login.php"><i class="fas fa-user-circle"></i>&nbsp;Se connecter</a>';
+ 					}
+
+					?>
 					</li>
 				</ul>
 				

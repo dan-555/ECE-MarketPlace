@@ -1,3 +1,6 @@
+<?php 
+session_start();
+ ?>
 <?php require_once('../../includes/connexion.php'); ?>
 
 
@@ -37,7 +40,7 @@
 					
 							echo "<div class='col-3'>
 													<div class='card h-100'>
-																		<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
+	<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
 								
 								<div  class='card-body d-flex flex-column' >
 							<h5 class='card-title'>" .$nom ."</span>&nbsp;</h5>

@@ -1,3 +1,7 @@
+<?php 
+session_start();
+ ?>
+
 <?php require_once('includes/connexion.php'); ?>
 
 <!DOCTYPE html>
