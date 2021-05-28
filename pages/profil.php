@@ -24,7 +24,7 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 	<link href="../css/pages/item.css" rel="stylesheet">
 </head>
 <body>
-	
+
 	<div classe="container-fluid">
 	<?php require '../includes/header.php'; ?>
 		
@@ -40,20 +40,75 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 			echo"<div class='container'>
 			
 			<h1>Type compte : admin</h1>
+			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
+			<br>
 			<h1>idLogin :" . $idLogin ."</h1>
 			<br>
 			<h1>Mail :".$_SESSION['mail'] ."</h1>
 			<br>
 			<h1>mdp :". $_SESSION['mdp'] ."</h1>
+		    
+				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
+		    </div>";
+		   }
+		
+		}
+
+			if($_SESSION['compte']=="vendeur")
+			{
+			
+			if($idLogin==$_SESSION['idLogin'])
+			{
+			echo"<div class='container'>
+	
+			<h1>Type compte : vendeur</h1>
+			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
+			<br>
+			<h1>idLogin :" . $idLogin ."</h1>
+			<br>
+			<h1>Mail :".$_SESSION['mail'] ."</h1>
+			<br>
+			<h1>mdp :". $_SESSION['mdp'] ."</h1>
+				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
+
 		    </div>";
 		
 		   }
 		
 		}
-		?>
+
+			if($_SESSION['compte']=="acheteur")
+			{
+			
+			if($idLogin==$_SESSION['idLogin'])
+			{
+			echo"<div class='container'>
+			
+			<h1>Type compte : acheteur</h1>
+			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
+			<br>
+			<h1>idLogin :" . $idLogin ."</h1>
+			<br>
+			<h1>Mail :".$_SESSION['mail'] ."</h1>
+			<br>
+			<h1>mdp :". $_SESSION['mdp'] ."</h1>
+				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
+
+		    </div>";
 		
-		<!-- Si vendeur charger ca -->
-		<!-- Si acheteur charger ca -->
+		   }
+		
+		}
+
+
+
+
+
+
+
+
+
+		?>
 		<div class="container content">
 		</div>
 		

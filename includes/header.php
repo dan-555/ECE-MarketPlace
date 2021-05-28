@@ -32,6 +32,7 @@
 						<a class="nav-link" href="//localhost//ECE-MarketPlace/pages/panier.php"><i class="fas fa-shopping-cart"></i>&nbsp;Panier</a>
 					</li>
 					<li class="nav-item active">
+
 					</li>
 				</ul>
 				

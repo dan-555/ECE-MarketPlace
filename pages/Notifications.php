@@ -161,7 +161,7 @@ session_start();
 									<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 									<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
 									<a href="#" class="p-2 bg-info btn btn-card mt-auto">Voir</a>
-									<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+									
 									
 								</div>
 							</div>
@@ -173,7 +173,7 @@ session_start();
 									<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 									<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
 									<a href="#" class="p-2 bg-info btn btn-card mt-auto">Voir</a>
-									<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+									
 									
 								</div>
 							</div>
@@ -185,7 +185,7 @@ session_start();
 									<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 									<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
 									<a href="#" class="p-2 bg-info btn btn-card mt-auto">Voir</a>
-									<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+									
 									
 								</div>
 							</div>
@@ -197,7 +197,7 @@ session_start();
 									<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 									<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
 									<a href="#" class="p-2 bg-info btn btn-card mt-auto">Voir</a>
-									<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+									
 									
 								</div>
 							</div>

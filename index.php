@@ -70,8 +70,7 @@
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" style="margin-bottom: 10px;">Voir </a>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
 								
 							</div>
 						</div>
@@ -96,8 +95,8 @@
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" style="margin-bottom: 10px;">Voir </a>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+
 								
 							</div>
 						</div>
@@ -108,8 +107,8 @@
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" style="margin-bottom: 10px;">Voir </a>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+
 								
 							</div>
 						</div>
@@ -122,8 +121,8 @@
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" style="margin-bottom: 10px;">Voir </a>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+
 								
 							</div>
 						</div>
@@ -134,8 +133,8 @@
 							<div  class="card-body d-flex flex-column">
 								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
 								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" style="margin-bottom: 10px;">Voir </a>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto"><i class="fas fa-shopping-cart"></i>&nbsp;Ajouter au Panier</a>
+								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+
 								
 						</div>
 					</div>
