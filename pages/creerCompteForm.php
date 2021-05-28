@@ -1,9 +1,7 @@
-
 <?php 
-
 require_once('../includes/connexion.php');
+?>
 
- ?>
 
 <?php
 $nom = isset($_POST["nom"])? $_POST["nom"] : "";
@@ -66,4 +64,5 @@ header('Location: ../index.php');
 //fermer la connexion
 }
 $mysqli->close();
+
 ?>

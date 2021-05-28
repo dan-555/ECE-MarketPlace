@@ -1,3 +1,5 @@
+<?php require 'loginForm.php'; ?>
+
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -18,19 +20,19 @@
 		
 		<div class="container section">
 			
-			<form action="">
+			<form method="POST">
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-at"></i></span>
-					<input type="text" class="form-control" placeholder="Mail" aria-label="Mail" aria-describedby="basic-addon1">
+					<input required type="text" class="form-control" placeholder="Mail" aria-label="Mail" aria-describedby="basic-addon1" name="mail">
 				</div>
 				
 				<div class="input-group mb-3">
 					<span class="input-group-text" id="basic-addon1"><i class="fas fa-key"></i></span>
-					<input type="password" class="form-control" placeholder="Mot de passe" aria-label="mdp" aria-describedby="basic-addon1">
+					<input required type="password" class="form-control" placeholder="Mot de passe" aria-label="mdp" aria-describedby="basic-addon1"name="mdp">
 				</div>
 				<div class="centrerbouton text-center">
-					<a role="button" class="btn btn-primary" href="">Se connecter</a>
+					<button class="btn btn-warning" name="bouton">Se connecter</button>
 					<a role="button" class="btn btn-warning" href="creerCompte.php">Creer un compte</a>
 				</div>
 			</form>
