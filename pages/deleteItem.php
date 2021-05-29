@@ -14,5 +14,6 @@ if(isset($idItem) AND isset($idCompte))
 
 $sql = "DELETE FROM panierItem WHERE item_idItem='$idItem' AND compteacheteur_idCompteAcheteur='$idCompte'";
 $result = $mysqli->query($sql);	
+echo "SUCCESS";
 }
 ?>

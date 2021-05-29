@@ -6,7 +6,6 @@ require_once('../includes/connexion.php');
 <?php
 
 @$idItem=$_POST["idItem"];
-
 @$idCompte=$_SESSION["compte"];
 @$idLogin=$_SESSION['idLogin'];
 

@@ -26,6 +26,7 @@ session_start();
 					{
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 	// Delete row on delete button click
 	$(document).on("click", ".delete", function()
 	{
@@ -38,17 +39,36 @@ session_start();
 
 						}
 >>>>>>> parent of f090e85 (deleteItem)
+=======
+
+	// Delete row on delete button click
+	$(document).on("click", ".delete", function()
+	{
+        $(this).parents("tr").remove();
+
+>>>>>>> parent of e57a931 (bug)
 
 						else {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    function removeItem(idItem)
+    {
+
+
+
+
+
+
+    }
+
+
+
+>>>>>>> parent of e57a931 (bug)
 });
 	
 
-function(prixTotal)
-{
-	var prixTotalAjour = <?php echo json_encode($prixTotal); ?>;
-}
 
 
 	</script>
@@ -92,11 +112,9 @@ function(prixTotal)
 			$sql = "SELECT item_idItem from panieritem WHERE compteacheteur_idCompteAcheteur='$idCompte'";
 			$result = $mysqli->query($sql);
 														
-			if ($result->num_rows > 0) //Si ya des articles
-			{ 
-			 //stockage des prix 
-				$prixTotal=0;
-												
+			if ($result->num_rows > 0)
+																			
+				{ //Si ya des articles
 			while($row = $result->fetch_assoc()) {	
 			//Pour chaque article de l'acheteur dans son panier
 				$idItem=$row['item_idItem'];
@@ -165,29 +183,33 @@ function(prixTotal)
 			 $nom=$row2['Nom'];
 			 $catAchat=$row2['categorieachat_CategorieAchat'];
 			 $prix=$row2['Prix'];
-			$prixTotal+= $prix;
-							
-				echo "<tr>
-			<th scope='row'>" .$idItem ."
 
-	&nbsp;<a role='button' class='btn' style='background-color:white;color: #007179' href='item.php?id=".$idItem ."'>Voir</a>
-
-
+<<<<<<< HEAD
 			</th>
 =======
 			}
 
 	}
 >>>>>>> parent of f090e85 (deleteItem)
+=======
+>>>>>>> parent of e57a931 (bug)
 
 				else {
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+							
+							echo "<tr>
+									<th scope='row'>" .$idItem ."</th>
+>>>>>>> parent of e57a931 (bug)
 	<td><img style='width:70px;height=50px;' src=data:image/jpeg;charset=utf8;base64," .base64_encode($photo) ."></td>
 									<td>".$nom ."</td>
 									<td>".$catAchat ."</td>
 									<td>".$prix ."</td>";
+		
 
+/*<td> <button class='btn' onclick='onclick='addItem( <?php echo $idItem; ?>)'> <a class='delete' title='Delete' data-toggle='tooltip'><i class='material-icons'><i class='fas fa-trash'></i></i></a></button>*/
 	?>
 	<td> <button class='btn' onclick='onclick=addItem(<?php echo $idItem; ?>,<?php echo $idCompte; ?>)'> <a class='delete' title='Delete' data-toggle='tooltip'><i class='fas fa-trash'></i></a></button>
 
@@ -198,17 +220,14 @@ function(prixTotal)
 										echo"	</tbody>
 																				</table>
 																</div>
-<div class='space'></div>
-
-<div class='checkout' style='float: right;''><span style='color:white;font-size:18px;margin-right: 240px;'>Total : " .$prixTotal."&nbsp;<i class='fas fa-euro-sign'></i></span>
-<a role='button' class='btn' style='background-color:white;color: #007179' href=''>Passer commande</a>
-
-
-
-</div>
-</div>
+																<div class='space'></div>
+																<div class='checkout' style='float: right;''><span style='color:white;font-size:18px;margin-right: 240px;''>Total :</span>
+																		<span id='Total'></span>
+					<a role='button' class='btn' style='background-color:white;color: #007179' href=''>Passer commande</a>
+																</div>
+													</div>
 											
-</div>";
+											</div>";
 /*TAB*/
 
 }

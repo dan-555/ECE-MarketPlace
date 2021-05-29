@@ -31,7 +31,7 @@
 				
 					$idItem=$_GET['id'];
 					$sql = "SELECT Nom, Description,Photos,Video,Prix,DatePublication,Marque from item WHERE idItem='{$idItem}'";
-					$result = $mysqli->query($sql);
+													$result = $mysqli->query($sql);
 						
 							$row = $result->fetch_assoc();
 							$nom=$row["Nom"];
@@ -45,7 +45,7 @@
 				echo "
 				<div style='margin-left:25%;margin-right: 25%; padding-top: ' class='card h-100'>
 					
-				<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
+								<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
 							<div  class='card-body d-flex flex-column'>
 								<h3 class='card-title'>" .$nom ."</span>&nbsp;</h3>
 								<div class='space'></div>
