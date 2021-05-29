@@ -1,8 +1,6 @@
-<?php
+<?php 
 session_start();
-?>
-<?php require_once('../includes/connexion.php'); ?>
-
+ ?>
 <!DOCTYPE html>
 <head>
 	<meta charset="UTF-8">
@@ -13,17 +11,37 @@ session_start();
 	<script src="../js/bootstrap.min.js"></script>
 	<script src="https://kit.fontawesome.com/aa064fe470.js" crossorigin="anonymous"></script>
 	<link href="../css/pages/panier.css" rel="stylesheet">
-	<script>
+</head>
+<body>
+	
+	<div classe="container-fluid">
+		<?php require '../includes/header.php'; ?>
+		
+		<h2>Mon Panier &nbsp;<i class="fas fa-shopping-bag"></i></h2>
+		<?php 
+				
 
-$(document).ready(function(){
+				// Si connecté
+	         	if(isset($_SESSION['idLogin']))
+					{
 
+<<<<<<< HEAD
 	// Delete row on delete button click
 	$(document).on("click", ".delete", function()
 	{
        $(this).parents("tr").remove();
+=======
+						if($_SESSION['compte']=="admin")
+						{
 
-    });
+						    	echo' <h1 style="text-align:center; color:white">Compte Admin pas de panier</h1>';
 
+						}
+>>>>>>> parent of f090e85 (deleteItem)
+
+						else {
+
+<<<<<<< HEAD
 });
 	
 
@@ -82,13 +100,67 @@ function(prixTotal)
 			while($row = $result->fetch_assoc()) {	
 			//Pour chaque article de l'acheteur dans son panier
 				$idItem=$row['item_idItem'];
+=======
 
-
-             $sql2 = "SELECT idItem, Photos, Nom,categorieachat_CategorieAchat,Prix from item WHERE idItem='$idItem'";
+							echo" 		<div class='container content'>
 			
-			 $result2 = $mysqli->query($sql2);
-			 $row2 = $result2->fetch_assoc();
+			<div class='table-wrapper-scroll-y my-custom-scrollbar  '>
+				<table style='background-color: white' class='table table-bordered table-hover table-striped'>
+					<thead>
+						<tr>
+							<th scope='col'>#Objet</th>
+							<th scope='col'>Photo</th>
+							<th scope='col'>Nom</th>
+							<th scope='col'>Type d'achat</th>
+							<th scope='col'>Prix</th>
+							<th scope='col ' style='width: 1%;''>Retirer</th>
+						</tr>
+					</thead>
+					
+					<tbody>";
 
+				
+			$sql = "SELECT item_idItem from panieritem WHERE compteacheteur_idCompteAcheteur='$_SESSION['idCompte']'";
+			$result = $mysqli->query($sql);
+
+		if ($result->num_rows > 0) { //Si ya des articles
+
+			while($row = $result->fetch_assoc()) {	//Pour chaque article
+
+			}
+
+
+
+				/*	<tr>
+							<th scope='row'>1</th>
+							<td>Mark</td>
+							<td>Otto</td>
+							<td>@mdo</td>
+							<td>@mdo</td>
+							<td><a role='button' class='btn btn-danger' href=''>Supprimer</a></td>
+						</tr>
+
+*/
+
+				echo"	</tbody>
+				</table>
+			</div>
+			<div class='space'></div>
+			<div class='checkout' style='float: right;''>
+				<span style='color:white;font-size:18px;margin-right: 240px;''>Total :</span>  
+				<span id='Total'></span>
+				<a role='button' class='btn' style='background-color:white;color: #007179' href=''>Passer commande</a>
+			</div>
+		</div>
+			
+</div>";
+
+
+>>>>>>> parent of f090e85 (deleteItem)
+
+
+
+<<<<<<< HEAD
 			 $photo=$row2['Photos'];
 			 $nom=$row2['Nom'];
 			 $catAchat=$row2['categorieachat_CategorieAchat'];
@@ -102,8 +174,15 @@ function(prixTotal)
 
 
 			</th>
+=======
+			}
 
+	}
+>>>>>>> parent of f090e85 (deleteItem)
 
+				else {
+
+<<<<<<< HEAD
 	<td><img style='width:70px;height=50px;' src=data:image/jpeg;charset=utf8;base64," .base64_encode($photo) ."></td>
 									<td>".$nom ."</td>
 									<td>".$catAchat ."</td>
@@ -139,34 +218,26 @@ function(prixTotal)
 	else {
 	echo' <h1 style="text-align:center; color:white">Veuillez vous connecter</h1>';
 	}
+=======
+				echo' <h1 style="text-align:center; color:white">Veuillez vous connecter</h1>';
 
-?>
-
-<div class="space"> </div>
-<div class="container" style="margin-top: 50px;">
-<?php require '../includes/footer.php'; ?>
-</div>
-
-<script>
-
-function addItem(idItem,idCompte)
-{
-var url= '../pages/deleteItem.php';
-
-$.ajax({
-
-type:"POST",
-url:url,
-data: {idItem: idItem, idCompte: idCompte},
-
-success: function(response){
-                alert(response);                                   
-}
-});
-}
+				}
+>>>>>>> parent of f090e85 (deleteItem)
 
 
-</script>
-</div>
+
+
+		 ?>
+		
+
+
+
+
+
+		<div class="space"> </div>
+		<div class="container" style="margin-top: 50px;">
+			<?php require '../includes/footer.php'; ?>
+		</div>
+	</div>
 </body>
 </html>
