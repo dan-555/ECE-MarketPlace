@@ -37,29 +37,30 @@ $sql1="INSERT INTO `compteacheteur` (`Nom`, `Prenom`, `adresse`, `Telephone`,`Ma
 $result1=$mysqli->query($sql1);
 
 
-$sql2="SELECT idCompteAcheteur from compteacheteur WHERE Mail='$mail'";
 
+$sql2="SELECT * from compteacheteur WHERE Mail='$mail'";
 $result2=$mysqli->query($sql2);
 
 while($row = $result2->fetch_assoc()) {
-		$idCompteAcheteur=$row["idCompteAcheteur"];
+$idCompteAcheteur=$row["idCompteAcheteur"];
 }
 
-$result2=$mysqli->query($sql2);
+$sql6="set foreign_key_checks=0";
+$result6=$mysqli->query($sql6);
 
- $sql3="INSERT INTO `loginclient` (`CompteAcheteur_idCompteAcheteur`,`Mail`,`MotDePasse`) VALUES ('$idCompteAcheteur','$mail','$mdp')";
-
-
-
-$sql3="INSERT INTO `loginclient` (`CompteAcheteur_idCompteAcheteur`, `Mail`, `MotDePasse`) VALUES ('$idCompteAcheteur', '$mail', 'mdp')";
+$sql10="INSERT INTO `loginclient` (`CompteAcheteur_idCompteAcheteur`, `Mail`, `MotDePasse`) VALUES ('$idCompteAcheteur', '$mail', '$mdp')";
 
 
-$result3=$mysqli->query($sql3);
+
+$result10=$mysqli->query($sql10);
+
+
 
 					echo '<script language="javascript">';
 					echo 'alert("Compte crée")';
 					echo '</script>';
 header('Location: ../index.php');
+
 }
 //fermer la connexion
 }

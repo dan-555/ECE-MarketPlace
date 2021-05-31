@@ -37,19 +37,10 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 			
 			if($idLogin==$_SESSION['idLogin'])
 			{
-			echo"<div class='container'>
-			
-			<h1>Type compte : admin</h1>
-			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
-			<br>
-			<h1>idLogin :" . $idLogin ."</h1>
-			<br>
-			<h1>Mail :".$_SESSION['mail'] ."</h1>
-			<br>
-			<h1>mdp :". $_SESSION['mdp'] ."</h1>
-		    
-				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
-		    </div>";
+
+
+				require 'admin/admin.php';
+		  
 		   }
 		
 		}
@@ -59,20 +50,9 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 			
 			if($idLogin==$_SESSION['idLogin'])
 			{
-			echo"<div class='container'>
-	
-			<h1>Type compte : vendeur</h1>
-			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
-			<br>
-			<h1>idLogin :" . $idLogin ."</h1>
-			<br>
-			<h1>Mail :".$_SESSION['mail'] ."</h1>
-			<br>
-			<h1>mdp :". $_SESSION['mdp'] ."</h1>
-				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
 
-		    </div>";
-		
+			require 'Seller/seller.php';
+
 		   }
 		
 		}
@@ -85,7 +65,7 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 			echo"<div class='container'>
 			
 			<h1>Type compte : acheteur</h1>
-			<h1>idCompte :" . $_SESSION['idCompte'] ."</h1>
+			<h1>idCompte :" . 	$_SESSION['idCompteAcheteur']."</h1>
 			<br>
 			<h1>idLogin :" . $idLogin ."</h1>
 			<br>
@@ -113,9 +93,6 @@ if (isset($_GET['id']) AND $_GET['id']>0)
 		</div>
 		
 		<div class="space"> </div>
-		<div class="container" style="margin-top: 50px;">
-			<?php require '../includes/footer.php'; ?>
-		</div>
 	</div>
 </body>
 </html>

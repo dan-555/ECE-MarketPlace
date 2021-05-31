@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once('../includes/connexion.php');
 ?>
 
@@ -6,17 +7,11 @@ require_once('../includes/connexion.php');
 @$mail = isset($_POST["mail"])? $_POST["mail"] : "";
 @$mdp = isset($_POST["mdp"])? $_POST["mdp"] : "";
 
-session_start();
-
-$_SESSION['mail']="";
-$_SESSION['mdp']="";
-$_SESSION['compte']="";
-$_SESSION['idCompte']="";
 
 if (isset($_POST["bouton"])) {
 
 //verifier si admin
-$sql="SELECT CompteAdministrateur_idCompteAdministrateur, idLogin from loginclient WHERE CompteAdministrateur_idCompteAdministrateur is not NULL and Mail='$mail' and MotDePasse='$mdp'";
+$sql="SELECT CompteAdministrateur_idCompteAdministrateur,CompteVendeur_idCompteVendeur, idLogin from loginclient WHERE CompteAdministrateur_idCompteAdministrateur is not NULL and Mail='$mail' and MotDePasse='$mdp'";
 $result = $mysqli->query($sql);
 
 if ($result->num_rows > 0) {
@@ -24,7 +19,7 @@ if ($result->num_rows > 0) {
 		 
 		$row = $result->fetch_assoc();
 		$idLogin=$row["idLogin"];
-		$idCompte=$row["CompteAdministrateur_idCompteAdministrateur"];
+		$idCompteAdmin=$row["CompteAdministrateur_idCompteAdministrateur"];
 
 					echo $idLogin;
 		
@@ -36,33 +31,33 @@ if ($result->num_rows > 0) {
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
 					$_SESSION['compte']="admin";	
-					$_SESSION['idCompte']=$idCompte;
+					$_SESSION['idCompteAdmin']=$idCompteAdmin;
+					$_SESSION['idCompteVendeur']=$row["CompteVendeur_idCompteVendeur"];
+
 
 					header("Location: profil.php?id=".$_SESSION['idLogin']);		
 }
 
 else
 {  //Verifier compte vendeur
-	$sql2="SELECT CompteVendeur_idCompteVendeur, idLogin from loginclient  WHERE CompteAdministrateur_idCompteAdministrateur is NULL and CompteVendeur_idCompteVendeur is not null and Mail='$mail' and MotDePasse='$mdp'";	
+	$sql2="SELECT CompteVendeur_idCompteVendeur, CompteAcheteur_idCompteAcheteur, idLogin from loginclient  WHERE CompteAdministrateur_idCompteAdministrateur is NULL and CompteVendeur_idCompteVendeur is not null and Mail='$mail' and MotDePasse='$mdp'";	
 
 	$result2 = $mysqli->query($sql2);
 
 	if ($result2->num_rows > 0)
 	 {
-	     $row = $result2->fetch_assoc();
+	    $row = $result2->fetch_assoc();
 	 	$idLogin=$row["idLogin"];
-		$idCompte=$row["CompteVendeur_idCompteVendeur"];
-
-		//c est un compte vendeur
-					echo '<script language="javascript">';
-					echo 'alert("vendeur")';
-					echo '</script>';
-				
+		
+		//c est un compte vendeur				
 					$_SESSION['idLogin']=$idLogin;			
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
 					$_SESSION['compte']="vendeur";
-					$_SESSION['idCompte']=$idCompte;
+
+					$_SESSION['idCompteVendeur']=$row["CompteVendeur_idCompteVendeur"];
+					$_SESSION['idCompteAcheteur']=$row["CompteAcheteur_idCompteAcheteur"];
+
 
 		 			header("Location: profil.php?id=".$_SESSION['idLogin']);		
 
@@ -78,20 +73,15 @@ else
 		{
 
 		//c est un compte acheteur
-		$row = $result3->fetch_assoc();
-	 	
+		$row = $result3->fetch_assoc();	 	
 	 	$idLogin=$row["idLogin"];
-		$idCompte=$row["CompteAcheteur_idCompteAcheteur"];
-
-					echo '<script language="javascript">';
-					echo 'alert("acheteur")';
-					echo '</script>';
+		$idCompteAcheteur=$row["CompteAcheteur_idCompteAcheteur"];
 					
 					$_SESSION['idLogin']=$idLogin;							
 					$_SESSION['mail']=$mail;
 					$_SESSION['mdp']=$mdp;
 					$_SESSION['compte']="acheteur";	
-					$_SESSION['idCompte']=$idCompte;
+					$_SESSION['idCompteAcheteur']=$idCompteAcheteur;
 
 					header("Location: profil.php?id=".$_SESSION['idLogin']);		
 					

@@ -28,6 +28,7 @@ session_start();
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
 					<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
 				</div>
+
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<img src="img/oppo.jpg" class="d-block w-100" alt="...">
@@ -70,19 +71,39 @@ session_start();
 				
 
 					<div class="row" data-masonry='{"percentPosition": true }'>
-					<div class="col-sm-6 col-lg-4 mb-4">
-						
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div  class="card-body d-flex flex-column">
-								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
-								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+					
+	<?php
+								$sql = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Achetez-le Maintenant' AND  idItem='39'";
+											
+								$result = $mysqli->query($sql);
+								$row = $result->fetch_assoc();
+								
+								$nom=$row["Nom"];
+								$id=$row["idItem"];
+								$prix=$row["Prix"];							
+							
+			
+
+
+
+?>
+
+
+
+			<div class='col-sm-6 col-lg-4 mb-4'>
+
+				<?php  	
+						echo "<div class='card h-100'>
+	<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
+								<div  class='card-body d-flex flex-column' >
+							<h5 class='card-title'>" .$nom ."</span>&nbsp;</h5>
+						<p class='card-text '>Prix : " .$prix ."</span>&nbsp;€</p>
+						<a href='pages/item.php?id=" .$id ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>
 								
 							</div>
-						</div>
-
-					</div>
+						</div>";
+?>	
+				</div>
 					
 					<div class="col-sm-6 col-lg-4 mb-4">
 						<div class="card p-3" style="background-color: red" >
@@ -90,45 +111,105 @@ session_start();
 								<blockquote class="blockquote">
 									<p style="color:white;">Profitez des offres allant jusqu'a -50%</p>
 								</blockquote>
-								<!--<figcaption class="blockquote-footer mb-0 text-muted">
-								Someone famous in <cite title="Source Title">Source Title</cite>
-								</figcaption> -->
+
 							</figure>
 						</div>
 					</div>
-					<div class="col-sm-6 col-lg-4 mb-4">
-						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div  class="card-body d-flex flex-column">
-								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
-								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+	<?php
+								$sql2 = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Achetez-le Maintenant' AND  idItem='40'";
+											
+								$result2 = $mysqli->query($sql2);
+								$row2 = $result2->fetch_assoc();
+								
+								$nom2=$row2["Nom"];
+								$id2=$row2["idItem"];
+								$prix2=$row2["Prix"];							
+							
+			
 
+
+
+?>
+					<div class="col-sm-6 col-lg-4 mb-4">
+
+						<div class="card h-100">
+
+
+											<?php  	
+						echo "<div class='card h-100'>
+
+	<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row2["Photos"]) ."  class='card-img-top'>
+								<div  class='card-body d-flex flex-column' >
+							<h5 class='card-title'>" .$nom2 ."</span>&nbsp;</h5>
+						<p class='card-text '>Prix : " .$prix2 ."</span>&nbsp;€</p>
+						<a href='pages/item.php?id=" .$id2 ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>
 								
 							</div>
+						</div>";
+?>	
+
+	<?php
+								$sql3 = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Achetez-le Maintenant' AND  idItem='41'";
+											
+								$result3 = $mysqli->query($sql3);
+								$row3 = $result3->fetch_assoc();
+								
+								$nom3=$row3["Nom"];
+								$id3=$row3["idItem"];
+								$prix3=$row3["Prix"];							
+	?>							
+			
+
 						</div>
 					</div>
 					<div class="col-sm-6 col-lg-4 mb-4">
 						<div class="card bg-warning text-white p-3">
-							<img src="..." class="card-img-top" alt="...">
-							<div  class="card-body d-flex flex-column">
-								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
-								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+<?php 
+								echo"<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row3["Photos"]) ."  class='card-img-top'>
+								<div  class='card-body d-flex flex-column' >
+							<h5 class='card-title'>" .$nom3 ."</span>&nbsp;</h5>
+						<p class='card-text '>Prix : " .$prix3 ."</span>&nbsp;€</p>
+						<a href='pages/item.php?id=" .$id3 ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>";
 
-								
+	 ?>							
 							</div>
 						</div>
 					</div>
 
-					
+			
+	<?php
+								$sql4 = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Achetez-le Maintenant' AND  idItem='20'";
+											
+								$result4 = $mysqli->query($sql4);
+								$row4 = $result4->fetch_assoc();
+								
+								$nom4=$row4["Nom"];
+								$id4=$row4["idItem"];
+								$prix4=$row4["Prix"];							
+	?>	
+
 					<div class="col-sm-6 col-lg-4 mb-4">
 						<div class="card h-100">
-							<img src="..." class="card-img-top" alt="...">
-							<div  class="card-body d-flex flex-column">
-								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
-								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+
+<?php 
+								echo"<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row4["Photos"]) ."  class='card-img-top'>
+								<div  class='card-body d-flex flex-column' >
+							<h5 class='card-title'>" .$nom4 ."</span>&nbsp;</h5>
+						<p class='card-text '>Prix : " .$prix4 ."</span>&nbsp;€</p>
+						<a href='pages/item.php?id=" .$id4 ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>";
+
+	 ?>		
+
+	<?php
+								$sql5 = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Achetez-le Maintenant' AND  idItem='42'";
+											
+								$result5 = $mysqli->query($sql5);
+								$row5 = $result5->fetch_assoc();
+								
+								$nom5=$row5["Nom"];
+								$id5=$row5["idItem"];
+								$prix5=$row5["Prix"];							
+	?>
 
 								
 							</div>
@@ -136,11 +217,15 @@ session_start();
 				</div>
 				<div class="col-sm-6 col-lg-4 mb-4">
 					<div class="card text-end">
-							<img src="..." class="card-img-top" alt="...">
-							<div  class="card-body d-flex flex-column">
-								<h5 class="card-title"><span class="titre"></span>&nbsp;</h5>
-								<p class="card-text ">Prix : <span class="prix"></span>&nbsp;€</p>
-								<a href="#" class="p-2 bg-info btn btn-card mt-auto" >Voir </a>
+						
+<?php 
+								echo"<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row5["Photos"]) ."  class='card-img-top'>
+								<div  class='card-body d-flex flex-column' >
+							<h5 class='card-title'>" .$nom5 ."</span>&nbsp;</h5>
+						<p class='card-text '>Prix : " .$prix5 ."</span>&nbsp;€</p>
+						<a href='pages/item.php?id=" .$id5 ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>";
+
+	 ?>		
 
 								
 						</div>

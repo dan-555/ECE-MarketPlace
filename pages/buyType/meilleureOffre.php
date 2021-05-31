@@ -26,25 +26,25 @@ session_start();
 				
 				
 				<?php
-								$sql = "SELECT idItem, Nom, Prix, Photos from item WHERE Commande_NumCommande is NULL and categorieachat_CategorieAchat='Meilleure offre'";
+								$sql = "SELECT idItem, Nom, Prix, Photos from item WHERE commande_idCommande is NULL and categorieachat_CategorieAchat='Meilleure offre'";
 											
 								$result = $mysqli->query($sql);
-								//echo "number of row".$result->num_rows;
 								
 								if ($result->num_rows > 0) {
+							
 								// output data of each row
 								while($row = $result->fetch_assoc()) {
+								
 								$nom=$row["Nom"];
 								$id=$row["idItem"];
 								$prix=$row["Prix"];
-					
 							echo "<div class='col-3'>
 													<div class='card h-100'>
 	<img src=data:image/jpeg;charset=utf8;base64," .base64_encode($row["Photos"]) ."  class='card-img-top'>
 								
 								<div  class='card-body d-flex flex-column' >
 							<h5 class='card-title'>" .$nom ."</span>&nbsp;</h5>
-																						<p class='card-text '>Prix : " .$prix ."</span>&nbsp;€</p>
+				<p class='card-text '>Prix : " .$prix ."</span>&nbsp;€</p>
 										
 						
 						<a href='../item.php?id=" .$id ."' class='p-2 bg-info btn btn-card mt-auto'>Voir</a>

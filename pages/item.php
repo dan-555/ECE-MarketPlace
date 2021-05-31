@@ -30,18 +30,40 @@
 			<div class='container content'>";
 				
 					$idItem=$_GET['id'];
-					$sql = "SELECT Nom, Description,Photos,Video,Prix,DatePublication,Marque from item WHERE idItem='{$idItem}'";
-													$result = $mysqli->query($sql);
+					
+					$sql = "SELECT Nom, Description,Photos,Video,Prix,DatePublication,DateExpiration,Marque,categorieachat_CategorieAchat,categorieitem_CategorieItem from item WHERE idItem='{$idItem}'";
+					       $result = $mysqli->query($sql);
 						
 							$row = $result->fetch_assoc();
+							
 							$nom=$row["Nom"];
 							$video=$row["Video"];
 							$description=$row["Description"];
 							$prix=$row["Prix"];
-							$datePub=$row["DatePublication"];
 							$marque=$row["Marque"];
+							$catAchat=$row["categorieachat_CategorieAchat"];
+							$catItem=$row["categorieitem_CategorieItem"];
+							
+							$datePub=$row["DatePublication"];
 							$date_time = date( 'Y-m-d', strtotime($datePub) );
-			
+						
+							$dateExp=$row["DateExpiration"];
+							$date_time2 = date( 'Y-m-d', strtotime($dateExp) );
+
+					$sql2 = "SELECT comptevendeur_idCompteVendeur from item WHERE idItem='{$idItem}'";
+					$result2 = $mysqli->query($sql2);
+					$row2 = $result2->fetch_assoc();
+					
+					$compteVendeur=$row2["comptevendeur_idCompteVendeur"];
+
+
+					$sql3 = "SELECT Pseudo from comptevendeur WHERE idCompteVendeur='{$compteVendeur}'";
+					$result3 = $mysqli->query($sql3);
+					$row3 = $result3->fetch_assoc();
+					
+					$pseudo=$row3["Pseudo"];
+
+
 				echo "
 				<div style='margin-left:25%;margin-right: 25%; padding-top: ' class='card h-100'>
 					
@@ -49,36 +71,144 @@
 							<div  class='card-body d-flex flex-column'>
 								<h3 class='card-title'>" .$nom ."</span>&nbsp;</h3>
 								<div class='space'></div>
-								<h4>Marque : ".$marque."</h4>
-								<div class='space'></div>
-								<h4>Description : ".$description."</h4>
-								<div class='space'></div>
-								<h4>Video :</h4>
-						
-						
-								<div class='space'></div>
-								<p class='card-text'>Prix : <span class='prix'></span>&nbsp;€</p>
-								<div class='space'></div>
-								<h4>Marque : ".$marque."</h4>
-								<h4>Date de publication : ".$date_time."</h4>";
-								
+								<h4>Marque : </h4>
+								<p> ".$marque." </p>
+								<h4>Description :</h4>
+								<p> ".$description." </p>
+								<h4>Type d'achat:</h4>
+								<p> ".$catAchat." </p>
+								<h4>Catégorie:</h4>
+								<p> ".$catItem." </p>
+								";
+
+								if ($catAchat=='Achetez-le Maintenant') {
+									echo "<p class='card-text'>Prix : ".$prix ."&nbsp;€</p>";
+
+								}
+
+
+							echo "
+								<h4>Date de publication : </h4>
+								<p> ".$date_time." </p>
+
+								<h4>Pseudo du vendeur : </h4>
+								<p> ".$pseudo." </p>";
+
 								if(isset($_SESSION['idLogin']))
 								{
 									$idLogin=$_SESSION['idLogin'];
-									?>
 									
-									<button name='bouton' onclick='addItem( <?php echo $idItem; ?>)' type='submit' class='p-2 bg-info btn btn-card mt-auto' ><i class='fas fa-shopping-cart'></i>&nbsp;Ajouter au Panier</button>
+if($catAchat=='Transaction Vendeur-Client')
+	{
+
+
+
+?>
+
+<div class='input-group mb-3' style="margin-top:10px;">
+  
+  <div class='input-group-prepend'>
+    <span class='input-group-text'>Faire une offre :</span>
+  </div>
+  <input name='price' id='prixTransac' type='number' min='0' class='form-control' aria-label='Amount (to the nearest dollar)'>
+  <div class='input-group-append'>
+    <span class='input-group-text'>€</span>
+  </div>
+ 
+ <button name='boutonTransac' onclick='demandeOffre( <?php echo $idItem; ?>,<?php echo $compteVendeur; ?>)' type='submit' class='bg-info btn btn-card' >Go !</button>
+</div>
+
+<!-- Vendeur -->
+<?php 
+
+$idCompteAcheteur=$_SESSION['idCompteAcheteur'];
+$compte=$_SESSION['compte'];
+
+if($compte=="acheteur" ||$compte=="vendeur" )
+{
+
+
+$sql4 = "SELECT OffreVendeur from `transaction` where item_idItem='$idItem' AND compteacheteur_idCompteAcheteur='$idCompteAcheteur' AND comptevendeur_idCompteVendeur='$compteVendeur'";
+$result4 = $mysqli->query($sql4);
+
+if ($result4->num_rows > 0) {
+
+$row4 = $result4->fetch_assoc();
+
+if (is_null($row4["OffreVendeur"])) {
+	// Rien afficher
+}
+else {
+$offreVendeur=$row4["OffreVendeur"];
+
+ ?>
+<div class='input-group mb-3' style="margin-top:20px;">
+  
+  <div class='input-group-prepend'>
+    <span class='input-group-text'>Offre du vendeur :</span>
+  </div>
+  <input disabled placeholder='<?php echo $offreVendeur; ?>' name='OffreVendeur' id='OffreVendeur' type='number' min='0' class='form-control' aria-label='Amount (to the nearest dollar)'>
+  <div class='input-group-append'>
+    <span class='input-group-text'>€</span>
+  </div>
+ 
+<button name='bouton' onclick='addItem( <?php echo $idItem; ?>)' type='submit' class='bg-info btn btn-card' ><i class='fas fa-shopping-cart'></i>&nbsp;Ajouter au Panier</button>
+
+
+</div>
+<!-- Vendeur -->
+<?php
+}
+}
+}
+
+}
+
+			elseif ($catAchat=='Achetez-le Maintenant') {
+
+			?>
+			
+			<button name='bouton' onclick='addItem( <?php echo $idItem; ?>)' type='submit' class='p-2 bg-info btn btn-card mt-auto' ><i class='fas fa-shopping-cart'></i>&nbsp;Ajouter au Panier</button>
+		
+		<?php
+
+			}
+			
+			elseif ($catAchat=='Meilleure Offre') {
+
+			?>
+			
+<div class='input-group mb-3' style="margin-top:20px;">
+  
+  <div class='input-group-prepend'>
+    <span class='input-group-text'>Enchère :</span>
+  </div>
+  
+  <input  name='enchere' id='enchere' type='number' min='0' class='form-control'>
+ 
+  <div class='input-group-append'>
+    <span class='input-group-text'>€</span>
+  </div>
+ 
+<button name='bouton' onclick='placerEnchere( <?php echo $idItem; ?>,<?php echo $compteVendeur; ?>)' type='submit' class='bg-info btn btn-card' ><i class="fa fa-gavel" aria-hidden="true"></i>
+&nbsp;Go !</button>
+</div>
+<?php
+
 								
-								<?php
-								}
-								
-								else {
-									echo " <button class='p-2 bg-info btn btn-card mt-auto  disabled' ><i class='fas fa-shopping-cart'></i>&nbsp;Vous devez vous connecter pour ajouter au Panier</button>";
-								}
-								
-								echo"
-						</div>
-						</div>";
+				echo "<h4>Fin d'enchère : </h4>
+				<p> ".$date_time2." </p>	";
+
+			}			
+}
+
+else {
+	echo " <button class='p-2 bg-info btn btn-card mt-auto  disabled' ><i class='fas fa-shopping-cart'></i>&nbsp;Vous devez vous connecter pour ajouter au Panier</button>";
+}
+			
+			echo"
+	</div>
+	</div>";
 		?>
 	</div>
 	<div class="space"> </div>
@@ -87,6 +217,44 @@
 	</div>
 </div>
 <script>
+
+
+//demandeOffre
+function demandeOffre(idItem,compteVendeur)
+{
+var price = document.getElementById('prixTransac').value;
+var url= '../pages/transactionForm.php';
+$.ajax({
+		type:"POST",
+		url:url,
+		data: {idItem: idItem, prixTransac: price, idCompteVendeur:compteVendeur},
+		success: function(response){
+		alert(response);
+		}
+		});
+}
+
+
+
+//placerEnchere
+function placerEnchere(idItem,compteVendeur)
+{
+
+var enchere = document.getElementById("enchere").value;
+console.log(enchere);
+
+var url= '../pages/placerEnchereForm.php';
+
+$.ajax({
+
+type:"POST",
+url:url,
+data: {idItem: idItem, prixEnchere: enchere, idCompteVendeur:compteVendeur},
+success: function(response){
+                alert(response);                                   
+}
+});
+}
 
 function addItem(idItem)
 {

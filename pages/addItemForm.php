@@ -6,10 +6,11 @@ require_once('../includes/connexion.php');
 <?php
 
 @$idItem=$_POST["idItem"];
-@$idCompte=$_SESSION["compte"];
+
+@$compte=$_SESSION["compte"];
 @$idLogin=$_SESSION['idLogin'];
 
-	if($idCompte=="acheteur" || $idCompte=="vendeur")
+	if($compte=="acheteur" || $compte=="vendeur")
 		{
 			$sql = "SELECT CompteAcheteur_idCompteAcheteur from loginclient WHERE idLogin='$idLogin'";
 			$result = $mysqli->query($sql);								

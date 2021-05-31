@@ -6,7 +6,7 @@ require_once('../includes/connexion.php');
 <?php
 
 @$idItem=$_POST["idItem"];
-@$idCompte=$_POST["idCompte"];
+@$idCompte=$_POST["idCompteAcheteur"];
 
 
 if(isset($idItem) AND isset($idCompte))
