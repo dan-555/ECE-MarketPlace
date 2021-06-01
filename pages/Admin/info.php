@@ -31,7 +31,7 @@
 			<h4>Mail :</h4>
 			<p>".$_SESSION['mail'] ."</p>
 		    
-				<a href='deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
+				<a href='../deconnexion.php'><button type='button' class='btn btn-primary'>Se deconnecter</button></a>
 		    </div>
 
 		    ";

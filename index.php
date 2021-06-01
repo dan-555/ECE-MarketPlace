@@ -235,7 +235,7 @@ session_start();
 						<div class="card p-3" style="background-color: red" >
 							<figure class="p-3 mb-0">
 								<blockquote class="blockquote">
-									<p style="color:white;">Rejoignez la plus grande plateforme de e-commerce en ligne.<br>Decouvrez des centaines d'objets mis en ligne par notre grande communotée </p>
+									<p style="color:white;">Rejoignez la plus grande plateforme de e-commerce en ligne.<br>Decouvrez des centaines d'objets mis en ligne par notre grande communauté </p>
 								</blockquote>
 								<!--<figcaption class="blockquote-footer mb-0 text-muted">
 								Someone famous in <cite title="Source Title">Source Title</cite>
