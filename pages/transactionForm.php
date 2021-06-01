@@ -13,10 +13,9 @@ require_once('../includes/connexion.php');
 
 if($compte=="acheteur" || $compte=="vendeur")
 {
-$sql = "SELECT compteacheteur_idCompteAcheteur from transaction WHERE compteacheteur_idCompteAcheteur='$idCompteAcheteur'";
+
+$sql = "SELECT compteacheteur_idCompteAcheteur from transaction WHERE compteacheteur_idCompteAcheteur='$idCompteAcheteur' AND item_idItem='$idItem'";
 $result = $mysqli->query($sql);
-
-
 
 
 if ($result->num_rows==0){
